@@ -10,12 +10,16 @@ User.destroy_all
 # Seed your database here
 
 puts "Creating todos"
-todo1 = Todo.create(todo_name: "Take out the trash", status: false, todo_id: 1)
-todo2 = Todo.create(todo_name: "Vacuum the floors", status: false, todo_id: 2 )
-todo3 = Todo.create(todo_name: "Go grocery shopping", status: false, todo_id: 3)
-todo4 = Todo.create(todo_name: "Clean the bathroom", status: false, todo_id: 4)
-todo5 = Todo.create(todo_name: "Cook dinner", status: false, todo_id: 5)
+todo1 = Todo.create(todo_name: "Take out the trash", status: false, user_id: 1)
+todo2 = Todo.create(todo_name: "Vacuum the floors", status: false, user_id: 2)
+todo3 = Todo.create(todo_name: "Go grocery shopping", status: false, user_id: 3)
+todo4 = Todo.create(todo_name: "Clean the bathroom", status: false, user_id: 2 )
+todo5 = Todo.create(todo_name: "Cook dinner", status: false, user_id: 3 )
+todo6 = Todo.create(todo_name: "Take a shower", status: false, user_id: 1)
 
 puts "Creating users"
+user1 = User.create(user_name: "Mike Pace", user_id: 1)
+user2 = User.create(user_name: "Jack DeFeo", user_id: 2)
+user3 = User.create(user_name: "Nick Lunn", user_id: 3)
 
 puts "✅ Done seeding!"

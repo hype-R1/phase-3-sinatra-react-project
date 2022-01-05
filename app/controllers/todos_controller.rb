@@ -9,7 +9,7 @@ get "/todo" do
 
   #Create a todo
   post "/todo" do 
-    todo = todo.create({name:params[:name], user:params[:user], active:params[:active]]})
+    todo = todo.create({name:params[:name], user:params[:user], active:params[:active]})
     todo.to_json(include: :user)
   end 
   #Update a todo
@@ -28,3 +28,4 @@ get "/todo" do
   
     {message: 'todo deleted'}.to_json
   end 
+end 
