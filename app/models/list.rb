@@ -1,7 +1,4 @@
-class List < ActiveRecord::Base
-    belongs_to :user
-    belongs_to :list
-
-
+class List < Sintra::Base
+    has_many :todos
     
 end

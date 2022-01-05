@@ -1,7 +1,4 @@
-class Todo < ActiveRecord::Base
-    belongs_to :user
+class Todo < Sintra::Base
     belongs_to :list
-
-
     
 end
