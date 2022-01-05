@@ -10,12 +10,12 @@ User.destroy_all
 # Seed your database here
 
 puts "Creating todos"
-todo1 = Todo.create(todo_name: "Take out the trash", status: false)
-todo2 = Todo.create(todo_name: "Vacuum the floors", status: false )
-todo3 = Todo.create(todo_name: "Go grocery shopping", status: false)
-todo4 = Todo.create(todo_name: "Clean the bathroom", status: false)
-todo5 = Todo.create(todo_name: "Cook dinner", status: false)
-todo6 = Todo.create(todo_name: "Take a shower", status: false)
+todo1 = Todo.create(todo_name: "Take out the trash", status: false, todo_id: rand(1..100))
+todo2 = Todo.create(todo_name: "Vacuum the floors", status: false, todo_id: rand(1..100))
+todo3 = Todo.create(todo_name: "Go grocery shopping", status: false, todo_id: rand(1..100))
+todo4 = Todo.create(todo_name: "Clean the bathroom", status: false, todo_id: rand(1..100))
+todo5 = Todo.create(todo_name: "Cook dinner", status: false, todo_id: rand(1..100))
+todo6 = Todo.create(todo_name: "Take a shower", status: false, todo_id: rand(1..100))
 
 puts "Creating List"
 
