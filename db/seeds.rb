@@ -10,13 +10,14 @@ User.destroy_all
 # Seed your database here
 
 puts "Creating todos"
-todo1 = Todo.create(todo_name: "Take out the trash", status: false, todo_id: rand(1..100))
-todo2 = Todo.create(todo_name: "Vacuum the floors", status: false, todo_id: rand(1..100))
-todo3 = Todo.create(todo_name: "Go grocery shopping", status: false, todo_id: rand(1..100))
-todo4 = Todo.create(todo_name: "Clean the bathroom", status: false, todo_id: rand(1..100))
-todo5 = Todo.create(todo_name: "Cook dinner", status: false, todo_id: rand(1..100))
-todo6 = Todo.create(todo_name: "Take a shower", status: false, todo_id: rand(1..100))
+todo1 = Todo.create(todo_name: "Take out the trash", status: false, list_id: 1)
+todo2 = Todo.create(todo_name: "Vacuum the floors", status: false, list_id: 1)
+todo3 = Todo.create(todo_name: "Go grocery shopping", status: false, list_id: 1)
+todo4 = Todo.create(todo_name: "Clean the bathroom", status: false, list_id: 1)
+todo5 = Todo.create(todo_name: "Cook dinner", status: false, list_id: 1)
+todo6 = Todo.create(todo_name: "Take a shower", status: false, list_id: 1)
 
 puts "Creating List"
+list1 = List.create(todo_id: 1)
 
 puts "✅ Done seeding!"
