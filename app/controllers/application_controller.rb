@@ -8,5 +8,34 @@ class ApplicationController < Sinatra::Base
   # display landing page 
 
 
+#these didnt work for me unless I copied and pasted them into the application_control file
+  get "/todo" do
+    todos = Todo.all
+    todos.to_json
+    
+  end 
+  
+  get "/list" do
+    List.all.to_json
+  end  
+
+  delete "/todo/:id" do
+
+    todo = todo.find(params[:id])
+    todo.destroy
+  
+    {message: 'todo deleted'}.to_json
+  end 
+
+  patch "/todo/:id" do 
+    todo = Todo.find(params[:id])
+    todo.update({name:params[:name],  status:params[:status]})
+    todo.to_json
+  end 
+
+  post "/todo" do 
+    todo = Todo.create({name:params[:name], status:params[:status]})
+    todo.to_json
+  end 
 
 end
