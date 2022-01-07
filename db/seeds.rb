@@ -12,16 +12,22 @@ List.destroy_all
 
 
 puts "Creating List"
-list1 = List.create()
+list1 = List.create(list_id: 1, name: "checked")
+list2 = List.create(list_id: 2, name: "unchecked")
+list3 = List.create(list_id: 3, name: "all")
 
 puts "Creating todos..."
-todo1 = Todo.create(todo_id: 1, todo_name: "Take out the trash", status: false, list_id: list1.id)
-todo2 = Todo.create(todo_id: 2, todo_name: "Vacuum the floors", status: false, list_id: list1.id)
-todo3 = Todo.create(todo_id: 3, todo_name: "Go grocery shopping", status: false, list_id: list1.id)
-todo4 = Todo.create(todo_id: 4, todo_name: "Clean the bathroom", status: false, list_id: list1.id)
-todo5 = Todo.create(todo_id: 5, todo_name: "Cook dinner", status: false, list_id: list1.id)
-todo6 = Todo.create(todo_id: 6, todo_name: "Take a shower", status: false, list_id: list1.id)
+todo1 = Todo.create( todo_name: "Take out the trash", status: false, list_id: 1)
+todo2 = Todo.create( todo_name: "Vacuum the floors", status: false, list_id: 1)
+todo3 = Todo.create( todo_name: "Go grocery shopping", status: false, list_id: 2)
+todo4 = Todo.create( todo_name: "Clean the bathroom", status: false, list_id: 3)
+todo5 = Todo.create( todo_name: "Cook dinner", status: false, list_id: 2)
+todo6 = Todo.create( todo_name: "Take a shower", status: false, list_id: 3)
 
 
 
 puts "✅ Done seeding!"
+
+
+#  bundle exec rake db:seed:replant
+

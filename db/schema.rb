@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(version: 2022_01_05_205816) do
 
   create_table "lists", force: :cascade do |t|
-    t.integer "todo_id"
+    t.integer "list_id"
+    t.string "name"
   end
 
   create_table "todos", force: :cascade do |t|
     t.string "todo_name"
     t.boolean "status"
     t.integer "list_id"
-    t.integer "todo_id"
   end
 
 end
