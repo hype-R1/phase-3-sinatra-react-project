@@ -17,12 +17,12 @@ list2 = List.create(list_id: 2, name: "unchecked")
 list3 = List.create(list_id: 3, name: "all")
 
 puts "Creating todos..."
-todo1 = Todo.create( todo_name: "Take out the trash", status: false, list_id: 1)
-todo2 = Todo.create( todo_name: "Vacuum the floors", status: false, list_id: 1)
-todo3 = Todo.create( todo_name: "Go grocery shopping", status: false, list_id: 2)
-todo4 = Todo.create( todo_name: "Clean the bathroom", status: false, list_id: 3)
-todo5 = Todo.create( todo_name: "Cook dinner", status: false, list_id: 2)
-todo6 = Todo.create( todo_name: "Take a shower", status: false, list_id: 3)
+20.times{Todo.create( name: Faker::Name.name, status: false, list_id: 1)}
+todo2 = Todo.create( name: "Vacuum the floors", status: false, list_id: 1)
+todo3 = Todo.create( name: "Go grocery shopping", status: false, list_id: 2)
+todo4 = Todo.create( name: "Clean the bathroom", status: false, list_id: 3)
+todo5 = Todo.create( name: "Cook dinner", status: false, list_id: 2)
+todo6 = Todo.create( name: "Take a shower", status: false, list_id: 3)
 
 
 

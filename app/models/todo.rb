@@ -13,11 +13,18 @@ class Todo < ActiveRecord::Base
     end
     # if unchecked it is a todo
 
-    def edit(todo_name)
-        self.update(todo_name: todo_name)
+    def edit(name)
+        self.update(name: todo_name)
+    end
+    # Todo.first.edit("toast")
+
+    def deleteTodo(todo)
+        self.todos.where("id =#{todo.id}").destroy_all
+
     end
 
-    # Todo.first.edit("toast")
+    # Todo.first.deleteTodo(Todo.find(1))
+
 
     
 

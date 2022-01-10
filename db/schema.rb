@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_01_05_205816) do
   end
 
   create_table "todos", force: :cascade do |t|
-    t.string "todo_name"
+    t.string "name"
     t.boolean "status"
     t.integer "list_id"
   end
